@@ -18,7 +18,7 @@ public class Servlet extends HttpServlet {
         String user = request.getParameter("username");
         String pass = request.getParameter("password");
 
-        if(user == "user" && pass == "password") {
+        if(user.equals("user") && pass.equals("password")) {
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
             out.println("<h3>Welcome back " + user + "</h3>");
